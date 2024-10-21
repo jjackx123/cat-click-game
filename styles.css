@@ -1,0 +1,91 @@
+/* 基本頁面樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* 標題樣式 */
+h1 {
+    color: #333;
+    font-size: 3rem; /* 放大標題文字 */
+    margin-bottom: 30px;
+}
+
+/* 遊戲介面樣式 */
+#game {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* 適當限制寬度，避免過度拉伸 */
+    width: 90%; /* 自適應寬度 */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem; /* 放大按鈕文字 */
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff69b4;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #ffc0cb;
+}
+
+button:hover:not(:disabled) {
+    background-color: #ff1493;
+}
+
+#countdown, #score, #highScore {
+    font-size: 2rem; /* 放大文字顯示 */
+    margin-bottom: 20px;
+}
+
+#highScore {
+    color: #28a745;
+}
+
+/* 貓咪圖片樣式，適應不同螢幕 */
+#catImage {
+    width: 100%; /* 使圖片寬度自適應 */
+    max-width: 300px; /* 設定最大寬度，避免過大 */
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+#catImage:active {
+    transform: scale(0.9); /* 點擊時縮小圖片 */
+}
+
+/* 增加響應式設計，適應手機螢幕 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+
+    #countdown, #score, #highScore {
+        font-size: 1.5rem;
+    }
+}

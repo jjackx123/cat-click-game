@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓貓點擊遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>貓貓點擊遊戲</h1>
+        <div id="game">
+            <p id="countdown">剩餘時間：<span id="time">10</span> 秒</p>
+            <img id="catImage" src="cat1.png" alt="點擊貓咪！" disabled>
+            <p id="score">點擊次數：<span id="clickCount">0</span></p>
+            <p id="highScore">最高分數：<span id="bestScore">0</span></p>
+            <button id="startButton">開始遊戲</button>
+            <button id="downloadButton" disabled>下載分數</button>
+        </div>
+        <!-- 音效元素 -->
+        <audio id="catSound" src="meow.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
